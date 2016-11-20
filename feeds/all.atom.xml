@@ -22,6 +22,11 @@
 &lt;h2&gt;Mathematics&amp;nbsp;typing&lt;/h2&gt;
 &lt;p&gt;Inline math equation &lt;span class="math"&gt;\(ax^2 + bx + c = 0\)&lt;/span&gt; and it&amp;#8217;s solution&amp;nbsp;in&lt;/p&gt;
 &lt;div class="math"&gt;$$ x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$&lt;/div&gt;
+&lt;h2&gt;Blockquote&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote paragraph 
+this sould be indented and&amp;nbsp;blocked.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2&gt;Admonition&lt;/h2&gt;
 &lt;p&gt;!!!&amp;nbsp;Note&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;This is a note
@@ -40,6 +45,11 @@
 
 &lt;p&gt;!!!&amp;nbsp;important &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;This is really important.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Code&amp;nbsp;Block&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hello world!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
