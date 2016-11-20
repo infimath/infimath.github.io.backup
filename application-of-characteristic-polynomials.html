@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Sandeep Suman" />
+        <meta name="copyright" content="Sandeep Suman" />
+
+        <meta name="description" content="Question 1: Suppose the matrix $$A=\begin{pmatrix} 40 & -29 & -11 \\ -18 & 30 & -12 \\ 26 & 24 & -50 \end{pmatrix} $$ has a certain complex number \(\lambda \neq 0\) as an eigenvalue. Which of the following numbers must also be an eigenvalue of \(A\)? \(\lambda +20\) 2. \(\lambda -20\) 3. \(20-\lambda\) ...if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) { var align = "center", indent = "0em", linebreak = "false"; if (false) { align = (screen.width
+" />
+<meta name="keywords" content="Determinant, Eigenvalue, Trace, math, " />
+        <title>Application of Characteristic&nbsp;Polynomials  · infimath
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://www.infimath.com/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://www.infimath.com/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="https://www.infimath.com/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="https://www.infimath.com/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="https://www.infimath.com/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="https://www.infimath.com/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="https://www.infimath.com/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="https://www.infimath.com/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="https://www.infimath.com/theme/images/apple-touch-icon-144x144.png" />
+        <link href="https://www.infimath.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="infimath - Full Atom Feed" />
+        <link href="https://www.infimath.com/feeds/food.atom.xml" type="application/atom+xml" rel="alternate" title="infimath - food Category Atom Feed" />
+        <link href="https://www.infimath.com/feeds/good.atom.xml" type="application/atom+xml" rel="alternate" title="infimath - good Category Atom Feed" />
+        <link href="https://www.infimath.com/feeds/main.atom.xml" type="application/atom+xml" rel="alternate" title="infimath - main Category Atom Feed" />
+        <link href="https://www.infimath.com/feeds/math.atom.xml" type="application/atom+xml" rel="alternate" title="infimath - math Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="https://www.infimath.com/"><span class=site-name>infimath</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="https://www.infimath.com">Home</a></li>
+                            <li ><a href="https://www.infimath.com/categories.html">Categories</a></li>
+                            <li ><a href="https://www.infimath.com/tags.html">Tags</a></li>
+                            <li ><a href="https://www.infimath.com/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="https://www.infimath.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="https://www.infimath.com/application-of-characteristic-polynomials.html"> Application of Characteristic&nbsp;Polynomials  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p><strong>Question 1:</strong> Suppose the&nbsp;matrix
+</p>
+<div class="math">$$A=\begin{pmatrix} 40 &amp; -29 &amp; -11 \\ -18 &amp; 30 &amp; -12 \\ 26 &amp; 24 &amp; -50 \end{pmatrix} $$</div>
+<p>
+has a certain complex number <span class="math">\(\lambda \neq 0\)</span> as an eigenvalue. Which of the following numbers must also be an eigenvalue of <span class="math">\(A\)</span>?</p>
+<ol>
+<li><span class="math">\(\lambda +20\)</span>      2.  <span class="math">\(\lambda -20\)</span>       3.  <span class="math">\(20-\lambda\)</span>     4. <span class="math">\(-20-\lambda\)</span></li>
+</ol>
+<p><strong>Answer:</strong> The sum of each row of the given matrix is <span class="math">\(0\)</span>, hence <span class="math">\(0\)</span> is an eigenvalue corresponds to eigenvector <span class="math">\((1,1,1)\)</span>.
+Let <span class="math">\(x\)</span> be the third eigenvalue,&nbsp;then
+</p>
+<div class="math">$$\text{trace }A=x+\lambda +0=20 \Rightarrow x = 20-\lambda.$$</div>
+<p>Hence <strong>3</strong> is correct&nbsp;choice.</p>
+<hr />
+<p><strong>Question 2:</strong>  Let <span class="math">\(A\)</span> be a <span class="math">\(3\times 3\)</span> matrix with real entries such that <span class="math">\(\det(A)=6\)</span> and the trace of <span class="math">\(A\)</span> is <span class="math">\(0\)</span>. If <span class="math">\(\det(A+I)=0\)</span>, where <span class="math">\(I\)</span> denote the <span class="math">\(3\times 3\)</span> identity matrix, then the eigenvalues of <span class="math">\(A\)</span>&nbsp;are</p>
+<ol>
+<li><span class="math">\(-1,2,3\)</span>  2. <span class="math">\(-1,2,-3\)</span>   3. <span class="math">\(1,2,-3\)</span>    4. <span class="math">\(-1,-2,3\)</span></li>
+</ol>
+<p><strong>Answer:</strong> Note <span class="math">\(\det(A+I)=0 \Rightarrow \det(A- (-1)I)= 0 $, hence $-1\)</span> is a eigenvalue.
+Assume other eigenvalues are <span class="math">\(x\)</span> and <span class="math">\(y\)</span>. Since trace <span class="math">\(A\)</span> =<span class="math">\((-1 )^{n-1}\)</span> (sum of eigenvalues) and det <span class="math">\(A\)</span> =  product of eigenvalues, we got following&nbsp;equations
+</p>
+<div class="math">$$\begin{align*} xy(-1) &amp;= 6 \\ x + y -1 &amp;= 0 \\ \Rightarrow x^2 - x - 6 &amp;= 0 \quad i.e., \quad x = - 2, 3\end{align*}$$</div>
+<p>
+Hence we get two possible set of eigenvalues, taking <span class="math">\(x = -2\)</span> we get <span class="math">\(-1, -2 , 3\)</span> and taking <span class="math">\(x = 3\)</span> we get <span class="math">\(-1 ,3, -2\)</span>(Same)</p>
+<p>Hence <strong>4</strong> is the correct&nbsp;choice.</p>
+<hr />
+<p><strong>Question 3:</strong>  Let <span class="math">\(A\in M_{10}(\mathbb{C})\)</span>, the vector space of <span class="math">\(10\times 10\)</span> matrices with entries in <span class="math">\(\mathbb{C}\)</span>. Let <span class="math">\(W_A\)</span> be the subspace of <span class="math">\(M_{10}(\mathbb{C})\)</span> spanned by <span class="math">\(\{A^n|n \geq =0\}\)</span>. Choose the correct&nbsp;statements.</p>
+<ol>
+<li>for any <span class="math">\(A, \dim(W_A)\leq&nbsp;10\)</span></li>
+<li>for any <span class="math">\(A, \dim(W_A)&lt;&nbsp;10\)</span></li>
+<li>for some <span class="math">\(A, 10&lt;\dim(W_A)&lt;&nbsp;100\)</span></li>
+<li>for any <span class="math">\(A, \dim(W_A)=&nbsp;100\)</span></li>
+</ol>
+<p><strong>Answer:</strong> Here we use Cayley-Hamilton Theorem, which says
+Every square matrix satisfies it’s characteristic polynomial. The characteristic polynomial for any square matrix of order <span class="math">\(n\)</span> is a monic polynomial of degree <span class="math">\(n\)</span>.</p>
+<p>The dimension of the matrix spanned by  <span class="math">\(\{A^n|n \geq =0\}\)</span> will be equal to number element linearly independent in the set. Since the matrix satisfies a monic polynomial of degree <span class="math">\(n\)</span>, we can write <span class="math">\(A^n\)</span> as a linear combination of <span class="math">\(I, A, \cdots, A^{n-1}\)</span> as&nbsp;follows
+</p>
+<div class="math">$$ A^n + c_{n-1} A^{n-1} + \cdots + c_0 I = 0 \Rightarrow A^n = -c_{n-1} A^{n-1} - \cdots - c_0 I $$</div>
+<p>
+Similarly all higher powers of <span class="math">\(A^n\)</span> can be written as linear combination of <span class="math">\(I, A, \cdots, A^{n-1}\)</span>, hence dimension of the given set can be at most number of element in <span class="math">\(I, A, \cdots, A^{n-1}\)</span>, <span class="math">\(i.e.\)</span>, <span class="math">\(10\)</span>.</p>
+<p>Hence option <strong>1</strong> is&nbsp;correct.</p>
+<hr />
+<p><strong>Question 4:</strong> Let <span class="math">\(J\)</span> denote a <span class="math">\(101 \times 101 $ matrix with all the entries equal to $1\)</span> and let <span class="math">\(I\)</span> denote the identity matrix of order <span class="math">\(101\)</span>. Then the determinant of <span class="math">\(J - I\)</span>&nbsp;is</p>
+<p><span class="math">\(1.~101 \quad  2. ~1 \quad 3. ~0  \quad&nbsp;4.~100\)</span></p>
+<p><strong>Answer:</strong> Few thing to&nbsp;consider</p>
+<blockquote>
+<ul>
+<li><span class="math">\(\det(A) = $ product of eigenvalues of $A\)</span>.</li>
+<li>If <span class="math">\(\lambda\)</span> an eigenvalue of any matrix <span class="math">\(A\)</span> then for any real number <span class="math">\(r\)</span>, <span class="math">\(\lambda + r\)</span> will be the eigenvalue of matrix <span class="math">\(A + rI\)</span>.
+(Why?)  <span class="math">\((A+rI)v = Av + rIv = \lambda v + rv = (\lambda +&nbsp;r)v\)</span></li>
+</ul>
+</blockquote>
+<p><strong>Find all the eigenvalues of <span class="math">\(J\)</span>:</strong> Since <span class="math">\(J-0I     = J\)</span>, Clearly <span class="math">\(0\)</span> is an eigenvalues of <span class="math">\(J\)</span>. Multiplicity of <span class="math">\(0\)</span> in the characteristic polynomial is equal to <span class="math">\(\text{nullity }(J-0I) = 101-\text{rank }(J-0I) = 101 - 1 = 100\)</span>.
+Hence we get <span class="math">\(100\)</span> out of <span class="math">\(101\)</span> possible eigenvalue. Note that <span class="math">\((1,1,\cdots , 1)^T\)</span> is a eigenvalue of <span class="math">\(J\)</span> with eigenvalue <span class="math">\(101\)</span>.</p>
+<p><strong>Now the eigenvalue of <span class="math">\(J-I\)</span>:</strong> We have <span class="math">\(100\)</span> eigenvalue <span class="math">\(-1\)</span> and one will be <span class="math">\(100\)</span>.&nbsp;Hence,
+</p>
+<div class="math">$$\det (J-I) = (-1)^{100} \times 100 = 100.$$</div>
+<p>
+Hence <strong>4</strong> is correct&nbsp;choice.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="https://www.infimath.com/this-food-is-great.html" title="Previous: This food is&nbsp;great">This food is&nbsp;great</a></li>
+ 
+                <li class="next_article"><a href="https://www.infimath.com/application-of-minimal-polynomials-i.html" title="Next: Application of Minimal Polynomials&nbsp;I">Application of Minimal Polynomials&nbsp;I</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2016-03-20T03:26:00+05:30">Mar 20, 2016</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#math-ref">math</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#Determinant-ref">Determinant
+                    <span>2</span>
+</a></li>
+                <li><a href="/tags.html#Eigenvalue-ref">Eigenvalue
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#Trace-ref">Trace
+                    <span>2</span>
+</a></li>
+            </ul>
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Sandeep Suman</li>
+        <li class="elegant-power">Powered by <a href="http://python.org" title="Python home page">Python</a>.</li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>
