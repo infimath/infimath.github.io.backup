@@ -1,57 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>infimath</title><link href="https://www.infimath.com/" rel="alternate"></link><link href="https://www.infimath.com/feeds/tech.atom.xml" rel="self"></link><id>https://www.infimath.com/</id><updated>2016-11-20T20:27:00+05:30</updated><entry><title>My First Post</title><link href="https://www.infimath.com/my-first-post.html" rel="alternate"></link><published>2016-11-20T20:27:00+05:30</published><updated>2016-11-20T20:27:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-11-20:my-first-post.html</id><summary type="html">&lt;p&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;/p&gt;
-&lt;h2&gt;Introduction&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>infimath</title><link href="https://www.infimath.com/" rel="alternate"></link><link href="https://www.infimath.com/feeds/tech.atom.xml" rel="self"></link><id>https://www.infimath.com/</id><updated>2016-11-20T20:27:00+05:30</updated><entry><title>My First Post</title><link href="https://www.infimath.com/my-first-post.html" rel="alternate"></link><published>2016-11-20T20:27:00+05:30</published><updated>2016-11-20T20:27:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-11-20:my-first-post.html</id><summary type="html">&lt;div class="toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#introduction"&gt;Introduction&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#numbered-list"&gt;Numbered&amp;nbsp;List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#unordered-list"&gt;unordered&amp;nbsp;list&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#check-list"&gt;check&amp;nbsp;list&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#mathematics-typing"&gt;Mathematics&amp;nbsp;typing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#blockquote"&gt;Blockquote&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#admonition"&gt;Admonition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#code-block"&gt;Code&amp;nbsp;Block&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This is a test post where I want check different feature of the&amp;nbsp;site&lt;/p&gt;
-&lt;h3&gt;Numbered&amp;nbsp;List&lt;/h3&gt;
+&lt;h3 id="numbered-list"&gt;Numbered&amp;nbsp;List&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;number&amp;nbsp;one&lt;/li&gt;
 &lt;li&gt;number&amp;nbsp;two &lt;/li&gt;
 &lt;li&gt;number&amp;nbsp;three&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;unordered&amp;nbsp;list&lt;/h3&gt;
+&lt;h3 id="unordered-list"&gt;unordered&amp;nbsp;list&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;item&amp;nbsp;one &lt;/li&gt;
 &lt;li&gt;item&amp;nbsp;two &lt;/li&gt;
 &lt;li&gt;item&amp;nbsp;three&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;check&amp;nbsp;list&lt;/h3&gt;
+&lt;h3 id="check-list"&gt;check&amp;nbsp;list&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;[x] crossed&amp;nbsp;choice&lt;/li&gt;
 &lt;li&gt;[ ] undecided&amp;nbsp;choice &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Mathematics&amp;nbsp;typing&lt;/h2&gt;
+&lt;h2 id="mathematics-typing"&gt;Mathematics&amp;nbsp;typing&lt;/h2&gt;
 &lt;p&gt;Inline math equation &lt;span class="math"&gt;\(ax^2 + bx + c = 0\)&lt;/span&gt; and it&amp;#8217;s solution&amp;nbsp;in&lt;/p&gt;
 &lt;div class="math"&gt;$$ x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$&lt;/div&gt;
-&lt;h2&gt;Blockquote&lt;/h2&gt;
+&lt;h2 id="blockquote"&gt;Blockquote&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This is a blockquote paragraph 
 this sould be indented and&amp;nbsp;blocked.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2&gt;Admonition&lt;/h2&gt;
-&lt;p&gt;!!!&amp;nbsp;Note&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;This is a note
+&lt;h2 id="admonition"&gt;Admonition&lt;/h2&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Please note&amp;nbsp;that&lt;/p&gt;
+&lt;p&gt;This is a&amp;nbsp;note &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="admonition-title"&gt;This is a&amp;nbsp;warning&lt;/p&gt;
+&lt;p&gt;This is a&amp;nbsp;warning.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonition tip"&gt;
+&lt;p class="admonition-title"&gt;This is a&amp;nbsp;tip&lt;/p&gt;
+&lt;p&gt;This is a&amp;nbsp;tip.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonition important"&gt;
+&lt;p class="admonition-title"&gt;This is really&amp;nbsp;important.&lt;/p&gt;
+&lt;p&gt;This is really&amp;nbsp;important.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id="code-block"&gt;Code&amp;nbsp;Block&lt;/h2&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hello world!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# This is a comment&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;!!!&amp;nbsp;warning &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;This is a warning.
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;!!!&amp;nbsp;tip &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;This is a tip.
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;!!!&amp;nbsp;important &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;This is really important.
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Code&amp;nbsp;Block&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hello world!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
