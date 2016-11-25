@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="./theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="./theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sandeep Suman">
+  <meta name="description" content="Posts and writings by Sandeep Suman">
+
+
+<meta name="keywords" content="Python, Jupyter">
+
+  <title>
+    infimath
+&ndash; Jupyter&nbsp;SlideShow  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href=".">
+        <img src="./theme/images/logo.png" alt="logo">
+      </a>
+      <h2><a href=".">Sandeep Suman</a></h2>
+      <p></p>
+      <ul>
+        <li><a href="https://www.infimath.com/computational-probability/" target="_blank">Computational Probability</a></li>
+        <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href=".">Index</a> &brvbar; <a href="./archives.html">Archives</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h1><a href="./jupyter-slideshow.html">Jupyter&nbsp;SlideShow</a></h1>
+  </div>
+  <div class="article_text">
+    <h2 id="introduction">Introduction</h2>
+<p>Slides are integral part of engaging presentations. Here we learn how to create slides in jupyter that can be run in your&nbsp;browser. </p>
+<h2 id="steps">Steps</h2>
+<ol>
+<li>
+<p>In a jupyter file first choose slideshow from view menu <code>view &gt; slideshow</code> as&nbsp;follows</p>
+<p><img alt="img" src="../images/adding_slides.png" /> </p>
+</li>
+<li>
+<p>It will add few choices in each cell as&nbsp;follows</p>
+<p><img alt="img" src="../images/slide_choices.png" /> </p>
+<p>The choices&nbsp;are </p>
+<ul>
+<li><strong>Slide:</strong> Will create a new slide from the cell. Each new slide appear&nbsp;horizontally. </li>
+<li><strong>Sub-slide:</strong> This will also create new slide but it will transition&nbsp;vertically.</li>
+<li><strong>Fragment:</strong> A part of slide appear in each&nbsp;forward. </li>
+<li><strong>Skip:</strong> This will not added in&nbsp;slideshow.</li>
+<li><strong>Notes:</strong> </li>
+</ul>
+</li>
+<li>
+<p>Change the cell setting to <code>makrdown</code>. Write the content in&nbsp;markdown.</p>
+<p><img alt="img" src="../images/change_to_markdown.png" /></p>
+</li>
+</ol>
+<h2 id="viewing-the-slides">Viewing the&nbsp;slides</h2>
+<p>The slide is a webpage like others you see often on internet. It uses a javascript library <code>raveal.js</code>. In commandline enter the&nbsp;following </p>
+<div class="highlight"><pre>jupyter-nbconvert  slides.ipynb <span class="se">\</span>
+         --reveal-prefix<span class="o">=</span>reveal.js --to slides --post serve
+</pre></div>
+
+
+<p>It will open a new tab in your browser with slides are open. Use arrow keys to&nbsp;navigate.</p>
+<h2 id="refrences">Refrences:</h2>
+<ol>
+<li><a href="http://echorand.me/presentation-slides-with-jupyter-notebook.html">Presentation slides with Jupyter&nbsp;Notebook</a></li>
+<li><a href="http://neuroscience.telenczuk.pl/?p=607">Giving presentations with IPython&nbsp;notebook</a></li>
+<li><a href="http://www.damian.oquanta.info/posts/make-your-slides-with-ipython.html">Make your slides with&nbsp;IPython</a></li>
+</ol>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Fri 25 November 2016</p>
+    <p>Category: <a href="./category/tech.html">tech</a>
+ &ndash; Tags:
+      <a href="./tag/python.html">Python</a>,      <a href="./tag/jupyter.html">Jupyter</a>    </p>
+  </div>
+
+
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; Sandeep Suman. Built using <a href="https://python.org">Python</a>.</p>
+    </div>
+  </main>
+</body>
+</html>

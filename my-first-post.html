@@ -3,11 +3,11 @@
 
 <head>
   <!-- ## for client-side less
-  <link rel="stylesheet/less" type="text/css" href="https://www.infimath.com/theme/css/style.less">
+  <link rel="stylesheet/less" type="text/css" href="./theme/css/style.less">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
   -->
-  <link rel="stylesheet" type="text/css" href="https://www.infimath.com/theme/css/style.css">
-  <link rel="stylesheet" type="text/css" href="https://www.infimath.com/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="./theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./theme/css/pygments.css">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
 
   <meta charset="utf-8" />
@@ -15,7 +15,6 @@
   <meta name="author" content="Sandeep Suman">
   <meta name="description" content="Posts and writings by Sandeep Suman">
 
-  <link href="https://www.infimath.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="infimath Atom" />
 
 <meta name="keywords" content="">
 
@@ -28,10 +27,10 @@
 <body>
   <aside>
     <div id="user_meta">
-      <a href="https://www.infimath.com">
-        <img src="https://www.infimath.com/theme/images/logo.png" alt="logo">
+      <a href=".">
+        <img src="./theme/images/logo.png" alt="logo">
       </a>
-      <h2><a href="https://www.infimath.com">Sandeep Suman</a></h2>
+      <h2><a href=".">Sandeep Suman</a></h2>
       <p></p>
       <ul>
         <li><a href="https://www.infimath.com/computational-probability/" target="_blank">Computational Probability</a></li>
@@ -43,14 +42,13 @@
   <main>
     <header>
       <p>
-      <a href="https://www.infimath.com">Index</a> &brvbar; <a href="https://www.infimath.com/archives.html">Archives</a>
-      &brvbar; <a href="https://www.infimath.com/feeds/all.atom.xml">Atom</a>
+      <a href=".">Index</a> &brvbar; <a href="./archives.html">Archives</a>
       </p>
     </header>
 
 <article>
   <div class="article_title">
-    <h1><a href="https://www.infimath.com/my-first-post.html">My First&nbsp;Post</a></h1>
+    <h1><a href="./my-first-post.html">My First&nbsp;Post</a></h1>
   </div>
   <div class="article_text">
     <div class="toc">
@@ -65,6 +63,7 @@
 <li><a href="#blockquote">Blockquote</a></li>
 <li><a href="#admonition">Admonition</a></li>
 <li><a href="#code-block">Code&nbsp;Block</a></li>
+<li><a href="#embedding-image">Embedding&nbsp;image</a></li>
 </ul>
 </div>
 <h2 id="introduction">Introduction</h2>
@@ -112,18 +111,16 @@ this sould be indented and&nbsp;blocked.</p>
 <p>This is really&nbsp;important.</p>
 </div>
 <h2 id="code-block">Code&nbsp;Block</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&quot;hello world!&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&quot;hello world!&quot;</span><span class="p">)</span>
 
 <span class="c"># This is a comment</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
-</td></tr></table>
 
+
+<h2 id="embedding-image">Embedding&nbsp;image</h2>
+<p><img alt="img" src="https://www.software.ac.uk/sites/default/files/images/content/jupyter-main-logo.svg" /></p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -184,21 +181,10 @@ this sould be indented and&nbsp;blocked.</p>
   </div>
   <div class="article_meta">
     <p>Posted on: Sun 20 November 2016</p>
-    <p>Category: <a href="https://www.infimath.com/category/tech.html">tech</a>
+    <p>Category: <a href="./category/tech.html">tech</a>
     </p>
   </div>
 
-  <div id="article_comments">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_identifier = "my-first-post.html";
-        (function() {
-             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-             dsq.src = '//infimath.disqus.com/embed.js';
-             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-         })();
-    </script>
-  </div>
 
 </article>
 
