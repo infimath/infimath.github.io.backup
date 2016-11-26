@@ -79,18 +79,41 @@
 </li>
 </ol>
 <h2 id="viewing-the-slides">Viewing the&nbsp;slides</h2>
-<p>The slide is a webpage like others you see often on internet. It uses a javascript library <code>raveal.js</code>. In commandline enter the&nbsp;following </p>
+<p>The slide is a webpage like others you see often on internet. It uses a javascript library <code>raveal.js</code>. To view the file locally we have to download the <code>reveal.js</code> library in the same folder. We can use <code>git</code> to&nbsp;download. </p>
+<div class="highlight"><pre>git clone https://github.com/hakimel/reveal.js.git
+</pre></div>
+
+
+<p>Now to view the file in your browser enter the following in the&nbsp;commandline.  </p>
 <div class="highlight"><pre>jupyter-nbconvert  slides.ipynb <span class="se">\</span>
          --reveal-prefix<span class="o">=</span>reveal.js --to slides --post serve
 </pre></div>
 
 
 <p>It will open a new tab in your browser with slides are open. Use arrow keys to&nbsp;navigate.</p>
+<h2 id="customization">Customization</h2>
+<p><code>Revial.js</code> comes with some default themes and transitions. To apply a theme say <code>sheif</code> and transition <code>cube</code> just add <code>?theme=sherif&amp;transition=cube</code> in the end of presentation&nbsp;url. </p>
+<p>More advanced Customization is possible through writing your own styple&nbsp;files. </p>
+<h3 id="default-themes">Default&nbsp;themes</h3>
+<p>The framework comes with a few different themes&nbsp;included:</p>
+<ul>
+<li>black: Black background, white text, blue links (default&nbsp;theme)</li>
+<li>white: White background, black text, blue&nbsp;links</li>
+<li>league: Gray background, white text, blue links (default theme - for reveal.js &lt;&nbsp;3.0.0)</li>
+<li>beige: Beige background, dark text, brown&nbsp;links</li>
+<li>sky: Blue background, thin dark text, blue&nbsp;links</li>
+<li>night: Black background, thick white text, orange&nbsp;links</li>
+<li>serif: Cappuccino background, gray text, brown&nbsp;links</li>
+<li>simple: White background, black text, blue&nbsp;links</li>
+<li>solarized: Cream-colored background, dark green text, blue&nbsp;links</li>
+</ul>
 <h2 id="refrences">Refrences:</h2>
 <ol>
 <li><a href="http://echorand.me/presentation-slides-with-jupyter-notebook.html">Presentation slides with Jupyter&nbsp;Notebook</a></li>
 <li><a href="http://neuroscience.telenczuk.pl/?p=607">Giving presentations with IPython&nbsp;notebook</a></li>
 <li><a href="http://www.damian.oquanta.info/posts/make-your-slides-with-ipython.html">Make your slides with&nbsp;IPython</a></li>
+<li><a href="https://docs.continuum.io/anaconda/jupyter-notebook-extensions">Jupyter notebook presentation&nbsp;extension</a></li>
+<li><a href="https://ipython.org/ipython-doc/3/notebook/nbconvert.html">Converting notebook to other&nbsp;format</a></li>
 </ol>
   </div>
   <div class="article_meta">

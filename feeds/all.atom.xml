@@ -130,18 +130,41 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="viewing-the-slides"&gt;Viewing the&amp;nbsp;slides&lt;/h2&gt;
-&lt;p&gt;The slide is a webpage like others you see often on internet. It uses a javascript library &lt;code&gt;raveal.js&lt;/code&gt;. In commandline enter the&amp;nbsp;following &lt;/p&gt;
+&lt;p&gt;The slide is a webpage like others you see often on internet. It uses a javascript library &lt;code&gt;raveal.js&lt;/code&gt;. To view the file locally we have to download the &lt;code&gt;reveal.js&lt;/code&gt; library in the same folder. We can use &lt;code&gt;git&lt;/code&gt; to&amp;nbsp;download. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/hakimel/reveal.js.git
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now to view the file in your browser enter the following in the&amp;nbsp;commandline.  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;jupyter-nbconvert  slides.ipynb &lt;span class="se"&gt;\&lt;/span&gt;
          --reveal-prefix&lt;span class="o"&gt;=&lt;/span&gt;reveal.js --to slides --post serve
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;It will open a new tab in your browser with slides are open. Use arrow keys to&amp;nbsp;navigate.&lt;/p&gt;
+&lt;h2 id="customization"&gt;Customization&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Revial.js&lt;/code&gt; comes with some default themes and transitions. To apply a theme say &lt;code&gt;sheif&lt;/code&gt; and transition &lt;code&gt;cube&lt;/code&gt; just add &lt;code&gt;?theme=sherif&amp;amp;transition=cube&lt;/code&gt; in the end of presentation&amp;nbsp;url. &lt;/p&gt;
+&lt;p&gt;More advanced Customization is possible through writing your own styple&amp;nbsp;files. &lt;/p&gt;
+&lt;h3 id="default-themes"&gt;Default&amp;nbsp;themes&lt;/h3&gt;
+&lt;p&gt;The framework comes with a few different themes&amp;nbsp;included:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default&amp;nbsp;theme)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue&amp;nbsp;links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links (default theme - for reveal.js &amp;lt;&amp;nbsp;3.0.0)&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown&amp;nbsp;links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue&amp;nbsp;links&lt;/li&gt;
+&lt;li&gt;night: Black background, thick white text, orange&amp;nbsp;links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown&amp;nbsp;links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue&amp;nbsp;links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue&amp;nbsp;links&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id="refrences"&gt;Refrences:&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://echorand.me/presentation-slides-with-jupyter-notebook.html"&gt;Presentation slides with Jupyter&amp;nbsp;Notebook&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://neuroscience.telenczuk.pl/?p=607"&gt;Giving presentations with IPython&amp;nbsp;notebook&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.damian.oquanta.info/posts/make-your-slides-with-ipython.html"&gt;Make your slides with&amp;nbsp;IPython&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.continuum.io/anaconda/jupyter-notebook-extensions"&gt;Jupyter notebook presentation&amp;nbsp;extension&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ipython.org/ipython-doc/3/notebook/nbconvert.html"&gt;Converting notebook to other&amp;nbsp;format&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</summary><category term="Python"></category><category term="Jupyter"></category></entry><entry><title>My First Post</title><link href="https://www.infimath.com/my-first-post.html" rel="alternate"></link><published>2016-11-20T20:27:00+05:30</published><updated>2016-11-20T20:27:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-11-20:my-first-post.html</id><summary type="html">&lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#introduction"&gt;Introduction&lt;/a&gt;&lt;ul&gt;
