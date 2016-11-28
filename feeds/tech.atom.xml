@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>infimath</title><link href="https://www.infimath.com/" rel="alternate"></link><link href="https://www.infimath.com/feeds/tech.atom.xml" rel="self"></link><id>https://www.infimath.com/</id><updated>2016-11-25T18:42:00+05:30</updated><entry><title>Watching Files in Python</title><link href="https://www.infimath.com/watching-files-in-python/" rel="alternate"></link><published>2016-11-25T18:42:00+05:30</published><updated>2016-11-25T18:42:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-11-25:watching-files-in-python/</id><summary type="html">&lt;p&gt;Often in development we want to activate a set of commands when a file system. We can use a python library &lt;code&gt;watchdog&lt;/code&gt; for&amp;nbsp;this. &lt;/p&gt;
+&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
+&lt;p&gt;To install &lt;code&gt;watchdog&lt;/code&gt; we can use &lt;code&gt;pip&lt;/code&gt; like most of python&amp;nbsp;library &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install watchdog
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="setup"&gt;Setup&lt;/h2&gt;
+&lt;p&gt;A simple program that keeps watch on changes in a folder recursively, means each files in subfolder as well is the&amp;nbsp;follwing&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt; 
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt; 
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;  
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;watchdog.observers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Observer&lt;/span&gt;  
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;watchdog.events&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;PatternMatchingEventHandler&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyHandler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PatternMatchingEventHandler&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;patterns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;*.py&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;*.md&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;process&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        event.event_type &lt;/span&gt;
+&lt;span class="sd"&gt;            &amp;#39;modified&amp;#39; | &amp;#39;created&amp;#39; | &amp;#39;moved&amp;#39; | &amp;#39;deleted&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;        event.is_directory&lt;/span&gt;
+&lt;span class="sd"&gt;            True | False&lt;/span&gt;
+&lt;span class="sd"&gt;        event.src_path&lt;/span&gt;
+&lt;span class="sd"&gt;            path/to/observed/file&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+        &lt;span class="c"&gt;# the file will be processed there&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;src_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;event_type&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+        &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;write your command here.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;on_modified&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;on_created&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
+    &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;.&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;observer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Observer&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;observer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;schedule&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MyHandler&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;recursive&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;observer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;KeyboardInterrupt&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;observer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="n"&gt;observer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Save the above script in a file &lt;code&gt;watcher.py&lt;/code&gt; in root of project. Now activate the watcher simply&amp;nbsp;by &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python watcher.py &lt;span class="o"&gt;[&lt;/span&gt;optional path of directory&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now whenever any file mentioned in patterns will change, the command in &lt;code&gt;process&lt;/code&gt; function will executed&amp;nbsp;automatically. &lt;/p&gt;
+&lt;h2 id="refrences"&gt;Refrences:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://github.com/gorakhargosh/watchdog/"&gt;Github&amp;nbsp;Repo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html"&gt;Watching a directory for file changes with&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="Python"></category></entry><entry><title>Jupyter SlideShow</title><link href="https://www.infimath.com/jupyter-slideshow/" rel="alternate"></link><published>2016-11-25T09:52:00+05:30</published><updated>2016-11-25T09:52:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-11-25:jupyter-slideshow/</id><summary type="html">&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Slides are integral part of engaging presentations. Here we learn how to create slides in jupyter that can be run in your&amp;nbsp;browser. &lt;/p&gt;
+&lt;h2 id="steps"&gt;Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;In a jupyter file first choose slideshow from view menu &lt;code&gt;view &amp;gt; slideshow&lt;/code&gt; as&amp;nbsp;follows&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="../images/adding_slides.png" /&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It will add few choices in each cell as&amp;nbsp;follows&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="../images/slide_choices.png" /&gt; &lt;/p&gt;
+&lt;p&gt;The choices&amp;nbsp;are &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Slide:&lt;/strong&gt; Will create a new slide from the cell. Each new slide appear&amp;nbsp;horizontally. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sub-slide:&lt;/strong&gt; This will also create new slide but it will transition&amp;nbsp;vertically.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fragment:&lt;/strong&gt; A part of slide appear in each&amp;nbsp;forward. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Skip:&lt;/strong&gt; This will not added in&amp;nbsp;slideshow.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change the cell setting to &lt;code&gt;makrdown&lt;/code&gt;. Write the content in&amp;nbsp;markdown.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="../images/change_to_markdown.png" /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="viewing-the-slides"&gt;Viewing the&amp;nbsp;slides&lt;/h2&gt;
+&lt;p&gt;The slide is a webpage like others you see often on internet. It uses a javascript library &lt;code&gt;raveal.js&lt;/code&gt;. To view the file locally we have to download the &lt;code&gt;reveal.js&lt;/code&gt; library in the same folder. We can use &lt;code&gt;git&lt;/code&gt; to&amp;nbsp;download. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/hakimel/reveal.js.git
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now to view the file in your browser enter the following in the&amp;nbsp;commandline.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;jupyter-nbconvert  slides.ipynb &lt;span class="se"&gt;\&lt;/span&gt;
+         --reveal-prefix&lt;span class="o"&gt;=&lt;/span&gt;reveal.js --to slides --post serve
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It will open a new tab in your browser with slides are open. Use arrow keys to&amp;nbsp;navigate.&lt;/p&gt;
+&lt;h2 id="customization"&gt;Customization&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Revial.js&lt;/code&gt; comes with some default themes and transitions. To apply a theme say &lt;code&gt;sheif&lt;/code&gt; and transition &lt;code&gt;cube&lt;/code&gt; just add &lt;code&gt;?theme=sherif&amp;amp;transition=cube&lt;/code&gt; in the end of presentation&amp;nbsp;url. &lt;/p&gt;
+&lt;p&gt;More advanced Customization is possible through writing your own styple&amp;nbsp;files. &lt;/p&gt;
+&lt;h3 id="default-themes"&gt;Default&amp;nbsp;themes&lt;/h3&gt;
+&lt;p&gt;The framework comes with a few different themes&amp;nbsp;included:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default&amp;nbsp;theme)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue&amp;nbsp;links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links (default theme - for reveal.js &amp;lt;&amp;nbsp;3.0.0)&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown&amp;nbsp;links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue&amp;nbsp;links&lt;/li&gt;
+&lt;li&gt;night: Black background, thick white text, orange&amp;nbsp;links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown&amp;nbsp;links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue&amp;nbsp;links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue&amp;nbsp;links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="refrences"&gt;Refrences:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://echorand.me/presentation-slides-with-jupyter-notebook.html"&gt;Presentation slides with Jupyter&amp;nbsp;Notebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://neuroscience.telenczuk.pl/?p=607"&gt;Giving presentations with IPython&amp;nbsp;notebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.damian.oquanta.info/posts/make-your-slides-with-ipython.html"&gt;Make your slides with&amp;nbsp;IPython&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.continuum.io/anaconda/jupyter-notebook-extensions"&gt;Jupyter notebook presentation&amp;nbsp;extension&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ipython.org/ipython-doc/3/notebook/nbconvert.html"&gt;Converting notebook to other&amp;nbsp;format&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="Python"></category><category term="Jupyter"></category></entry><entry><title>My First Post</title><link href="https://www.infimath.com/my-first-post/" rel="alternate"></link><published>2016-11-20T20:27:00+05:30</published><updated>2016-11-20T20:27:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-11-20:my-first-post/</id><summary type="html">&lt;div class="toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#introduction"&gt;Introduction&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#numbered-list"&gt;Numbered&amp;nbsp;List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#unordered-list"&gt;unordered&amp;nbsp;list&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#check-list"&gt;check&amp;nbsp;list&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#mathematics-typing"&gt;Mathematics&amp;nbsp;typing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#blockquote"&gt;Blockquote&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#admonition"&gt;Admonition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#code-block"&gt;Code&amp;nbsp;Block&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#embedding-image"&gt;Embedding&amp;nbsp;image&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This is a test post where I want check different feature of the&amp;nbsp;site&lt;/p&gt;
+&lt;h3 id="numbered-list"&gt;Numbered&amp;nbsp;List&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;number&amp;nbsp;one&lt;/li&gt;
+&lt;li&gt;number&amp;nbsp;two &lt;/li&gt;
+&lt;li&gt;number&amp;nbsp;three&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="unordered-list"&gt;unordered&amp;nbsp;list&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;item&amp;nbsp;one &lt;/li&gt;
+&lt;li&gt;item&amp;nbsp;two &lt;/li&gt;
+&lt;li&gt;item&amp;nbsp;three&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="check-list"&gt;check&amp;nbsp;list&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[x] crossed&amp;nbsp;choice&lt;/li&gt;
+&lt;li&gt;[ ] undecided&amp;nbsp;choice &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="mathematics-typing"&gt;Mathematics&amp;nbsp;typing&lt;/h2&gt;
+&lt;p&gt;Inline math equation &lt;span class="math"&gt;\(ax^2 + bx + c = 0\)&lt;/span&gt; and it&amp;#8217;s solution&amp;nbsp;in&lt;/p&gt;
+&lt;div class="math"&gt;$$ x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$&lt;/div&gt;
+&lt;h2 id="blockquote"&gt;Blockquote&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote paragraph 
+this sould be indented and&amp;nbsp;blocked.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="admonition"&gt;Admonition&lt;/h2&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Please note&amp;nbsp;that&lt;/p&gt;
+&lt;p&gt;This is a&amp;nbsp;note &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="admonition-title"&gt;This is a&amp;nbsp;warning&lt;/p&gt;
+&lt;p&gt;This is a&amp;nbsp;warning.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonition tip"&gt;
+&lt;p class="admonition-title"&gt;This is a&amp;nbsp;tip&lt;/p&gt;
+&lt;p&gt;This is a&amp;nbsp;tip.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonition important"&gt;
+&lt;p class="admonition-title"&gt;This is really&amp;nbsp;important.&lt;/p&gt;
+&lt;p&gt;This is really&amp;nbsp;important.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id="code-block"&gt;Code&amp;nbsp;Block&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hello world!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# This is a comment&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="embedding-image"&gt;Embedding&amp;nbsp;image&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="img" src="https://www.software.ac.uk/sites/default/files/images/content/jupyter-main-logo.svg" /&gt;&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary></entry></feed>
