@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>infimath</title><link href="https://www.infimath.com/" rel="alternate"></link><link href="https://www.infimath.com/feeds/tech.atom.xml" rel="self"></link><id>https://www.infimath.com/</id><updated>2016-11-25T18:42:00+05:30</updated><entry><title>Watching Files in Python</title><link href="https://www.infimath.com/watching-files-in-python/" rel="alternate"></link><published>2016-11-25T18:42:00+05:30</published><updated>2016-11-25T18:42:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-11-25:watching-files-in-python/</id><summary type="html">&lt;p&gt;Often in development we want to activate a set of commands when a file system. We can use a python library &lt;code&gt;watchdog&lt;/code&gt; for&amp;nbsp;this. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>infimath</title><link href="https://www.infimath.com/" rel="alternate"></link><link href="https://www.infimath.com/feeds/tech.atom.xml" rel="self"></link><id>https://www.infimath.com/</id><updated>2016-11-25T18:42:00+05:30</updated><entry><title>Watching Files in Python</title><link href="https://www.infimath.com/watching-files-in-python" rel="alternate"></link><published>2016-11-25T18:42:00+05:30</published><updated>2016-11-25T18:42:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-11-25:watching-files-in-python</id><summary type="html">&lt;p&gt;Often in development we want to activate a set of commands when a file system. We can use a python library &lt;code&gt;watchdog&lt;/code&gt; for&amp;nbsp;this. &lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;p&gt;To install &lt;code&gt;watchdog&lt;/code&gt; we can use &lt;code&gt;pip&lt;/code&gt; like most of python&amp;nbsp;library &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;pip install watchdog
@@ -104,7 +104,7 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://github.com/gorakhargosh/watchdog/"&gt;Github&amp;nbsp;Repo&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html"&gt;Watching a directory for file changes with&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="Python"></category></entry><entry><title>Jupyter SlideShow</title><link href="https://www.infimath.com/jupyter-slideshow/" rel="alternate"></link><published>2016-11-25T09:52:00+05:30</published><updated>2016-11-25T09:52:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-11-25:jupyter-slideshow/</id><summary type="html">&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;/ol&gt;</summary><category term="Python"></category></entry><entry><title>Jupyter SlideShow</title><link href="https://www.infimath.com/jupyter-slideshow" rel="alternate"></link><published>2016-11-25T09:52:00+05:30</published><updated>2016-11-25T09:52:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-11-25:jupyter-slideshow</id><summary type="html">&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Slides are integral part of engaging presentations. Here we learn how to create slides in jupyter that can be run in your&amp;nbsp;browser. &lt;/p&gt;
 &lt;h2 id="steps"&gt;Steps&lt;/h2&gt;
 &lt;ol&gt;
@@ -165,7 +165,7 @@
 &lt;li&gt;&lt;a href="http://www.damian.oquanta.info/posts/make-your-slides-with-ipython.html"&gt;Make your slides with&amp;nbsp;IPython&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.continuum.io/anaconda/jupyter-notebook-extensions"&gt;Jupyter notebook presentation&amp;nbsp;extension&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://ipython.org/ipython-doc/3/notebook/nbconvert.html"&gt;Converting notebook to other&amp;nbsp;format&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="Python"></category><category term="Jupyter"></category></entry><entry><title>My First Post</title><link href="https://www.infimath.com/my-first-post/" rel="alternate"></link><published>2016-11-20T20:27:00+05:30</published><updated>2016-11-20T20:27:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-11-20:my-first-post/</id><summary type="html">&lt;div class="toc"&gt;
+&lt;/ol&gt;</summary><category term="Python"></category><category term="Jupyter"></category></entry><entry><title>My First Post</title><link href="https://www.infimath.com/my-first-post" rel="alternate"></link><published>2016-11-20T20:27:00+05:30</published><updated>2016-11-20T20:27:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-11-20:my-first-post</id><summary type="html">&lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#introduction"&gt;Introduction&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#numbered-list"&gt;Numbered&amp;nbsp;List&lt;/a&gt;&lt;/li&gt;
