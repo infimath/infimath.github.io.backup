@@ -4,12 +4,12 @@
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;p&gt;Jupyter is a python package hence can be installed like other python packages, but for beginner best way is to install &lt;a href="https://www.continuum.io/downloads"&gt;anaconda python&lt;/a&gt;. Just install anaconda python suitable for your computer and all required package will be automatically&amp;nbsp;installed.&lt;/p&gt;
 &lt;h2 id="quickstart"&gt;Quickstart&lt;/h2&gt;
-&lt;p&gt;Anaconda python make a shorcut for jupyter which can be used to open jupyter like other windows application. It will open the jupyter in your home directory and you can browse the folder to your workfolder. Each time browsing to your workspace is little bit tedious so better way is open the command prompt in your workfolder and then&amp;nbsp;type&lt;/p&gt;
+&lt;p&gt;Anaconda python make a shortcut for jupyter which can be used to open jupyter like other windows application. It will open the jupyter in your home directory and you can browse the folder to your workfolder. Each time browsing to your workspace is little bit tedious so better way is open the command prompt in your workfolder and then&amp;nbsp;type&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;jupyter notebook
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;A new window/tab will be open your defauld browser with&amp;nbsp;jupyter. &lt;/p&gt;
+&lt;p&gt;A new window/tab will be open in your default browser with&amp;nbsp;jupyter.  &lt;/p&gt;
 &lt;h2 id="references"&gt;References&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/"&gt;Jupyter&amp;nbsp;Guide&lt;/a&gt;&lt;/li&gt;
