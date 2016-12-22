@@ -2,14 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>infimath</title><link href="https://www.infimath.com/" rel="alternate"></link><link href="https://www.infimath.com/feeds/all.atom.xml" rel="self"></link><id>https://www.infimath.com/</id><updated>2016-12-22T08:33:00+05:30</updated><entry><title>Quickstart Jupyter</title><link href="https://www.infimath.com/quickstart-jupyter/" rel="alternate"></link><published>2016-12-22T08:33:00+05:30</published><updated>2016-12-22T08:33:00+05:30</updated><author><name>Sandeep Suman</name></author><id>tag:www.infimath.com,2016-12-22:quickstart-jupyter/</id><summary type="html">&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Jupyter is a notebook implementation of IPython in browser. The notebook is good way of computing, saving and sharing content that contains program as well as&amp;nbsp;text. &lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
-&lt;p&gt;Jupyter is a python package hence can be installed like other python packages, but for beginner best way is to install &lt;a href="https://www.continuum.io/downloads"&gt;anaconda python&lt;/a&gt;. Just install anaconda python suitable for your computer and all required package will be automatically&amp;nbsp;installed.&lt;/p&gt;
+&lt;p&gt;Jupyter is a python package hence it can be installed like other python packages, but for beginner installing &lt;a href="https://www.continuum.io/downloads"&gt;anaconda python&lt;/a&gt; is better. Anaconda python comes with a large number of library and you don&amp;#8217;t have to install&amp;nbsp;anything.  &lt;/p&gt;
 &lt;h2 id="quickstart"&gt;Quickstart&lt;/h2&gt;
-&lt;p&gt;Anaconda python make a shortcut for jupyter which can be used to open jupyter like other windows application. It will open the jupyter in your home directory and you can browse the folder to your workfolder. Each time browsing to your workspace is little bit tedious so better way is open the command prompt in your workfolder and then&amp;nbsp;type&lt;/p&gt;
+&lt;p&gt;Anaconda python make a shortcut for jupyter which can be used to open jupyter like other windows application. It will open the jupyter in your home directory and you can browse the folder to your workfolder. Each time browsing to your workspace is little bit tedious so better way is open the command prompt in your workfolder as&amp;nbsp;follows&lt;/p&gt;
+&lt;p&gt;&lt;img src='..\images\open-cmd.gif' rel='drawing' width='400'&gt;&lt;/p&gt;
+&lt;p&gt;Now type the follwing&amp;nbsp;command. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;jupyter notebook
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;A new window/tab will be open in your default browser with&amp;nbsp;jupyter.  &lt;/p&gt;
+&lt;p&gt;Jupyter will be open in a new window/tab will be open in your default&amp;nbsp;browser.  &lt;/p&gt;
 &lt;h2 id="references"&gt;References&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/"&gt;Jupyter&amp;nbsp;Guide&lt;/a&gt;&lt;/li&gt;
